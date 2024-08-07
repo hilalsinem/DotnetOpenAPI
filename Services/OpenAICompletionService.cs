@@ -24,11 +24,11 @@ namespace dotnetApiProject.Services
             {
                 try
                 {
-                    Console.Write("::");
+                    Console.Write("::Merhaba! Ne sormak istersiniz?");
                     string input = Console.ReadLine();
                     if (string.IsNullOrEmpty(input))
                     {
-                        Console.WriteLine("Prompt cannot be empty. Please try again.");
+                        Console.WriteLine("Prompt boş olamaz. Lütfen tekrar deneyin");
                         continue;
                     }
 
@@ -44,8 +44,8 @@ namespace dotnetApiProject.Services
                     }
                     else
                     {
-                        Console.WriteLine("No response received from the API.");
-                        Console.WriteLine("Response: " + (result == null ? "null" : result.ToString()));
+                        Console.WriteLine("API cevap vermiyor.");
+                        Console.WriteLine("Cevap: " + (result == null ? "null" : result.ToString()));
                     }
                 }
                 catch (Exception ex)
